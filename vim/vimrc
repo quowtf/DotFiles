@@ -1,0 +1,46 @@
+set number
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set encoding=utf-8
+set showmatch
+set sw=2
+set relativenumber
+set laststatus=2
+set noshowmode
+set cursorline
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
+
+let mapleader=" "
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+let g:EasyMotion_use_smartsign_us = 1 " US layout
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let g:NERDTreeWinPos="right"
+
+" Easymotion
+nmap <Leader>g <Plug>(easymotion-s2)
+nmap <Leader>l <Plug>(easymotion-lineforward)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
+nmap <Leader>h <Plug>(easymotion-linebackward)
+" NERDTree
+nmap <Leader>f :NERDTreeToggleVCS<CR>
+" CustomMaps
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>wq :wq<CR>
