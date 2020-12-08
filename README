@@ -1,0 +1,20 @@
+# Setup
+
+## Vim
+
+Vim require these 3 dirs
+
+```bash
+mkdir ~/.vim/backup
+mkdir ~/.vim/swap/
+mkdir ~/.vim/undo
+```
+## Privacy
+
+### Homebrew
+
+#### Disable brew analiotycs
+
+```bash
+brew analytics off
+```
